@@ -118,56 +118,56 @@ void count_neighbours(){
               }
             }   
         }else if(x == 0 && y > 0 && y < poleH-1){  //left column
-            int pos[][] = {{0,-1},{1,0},{0,1},{1,1},{1,-1}};
+            int pos[][] = {{0,-1},{1,0},{0,1},{1,1},{1,-1},{49,-1},{49,0},{49,1}};
             for(int i = 0;i<pos.length;i++){
               if(pole[x+pos[i][0]][y+pos[i][1]] == 1){
                 nb[x][y]++;
               }
             }   
         }else if(x == poleW-1 && y > 0 && y < poleH-1){  //right column
-            int pos[][] = {{0,-1},{-1,0},{0,1},{-1,-1},{-1,1}};
+            int pos[][] = {{0,-1},{-1,0},{0,1},{-1,-1},{-1,1},{-49,-1},{-49,0},{-49,1}};
             for(int i = 0;i<pos.length;i++){
               if(pole[x+pos[i][0]][y+pos[i][1]] == 1){
                 nb[x][y]++;
               }
             }   
         }else if(y == 0 && x > 0 && x < poleW-1){  //top row
-            int pos[][] = {{-1,0},{1,0},{0,1},{-1,1},{1,1}};
+            int pos[][] = {{-1,0},{1,0},{0,1},{-1,1},{1,1},{-1,49},{0,49},{1,49}};
             for(int i = 0;i<pos.length;i++){
               if(pole[x+pos[i][0]][y+pos[i][1]] == 1){
                 nb[x][y]++;
               }
             }   
         }else if(y == poleH-1 && x > 0 && x < poleW-1){  //bottom row
-            int pos[][] = {{-1,0},{1,0},{0,-1},{-1,-1},{1,-1}};
+            int pos[][] = {{-1,0},{1,0},{0,-1},{-1,-1},{1,-1},{-1,-49},{0,-49},{1,-49}};
             for(int i = 0;i<pos.length;i++){
               if(pole[x+pos[i][0]][y+pos[i][1]] == 1){
                 nb[x][y]++;
               }
             }   
         }else if(x == 0 && y == 0){  //top left
-            int pos[][] = {{1,0},{1,1},{0,1}};
+            int pos[][] = {{1,0},{1,1},{0,1},{49,0},{49,49},{0,49}};
             for(int i = 0;i<pos.length;i++){
               if(pole[x+pos[i][0]][y+pos[i][1]] == 1){
                 nb[x][y]++;
               }
             }   
         }else if(x == poleW-1 && y == 0){  //top right
-            int pos[][] = {{-1,0},{-1,1},{0,1}};
+            int pos[][] = {{-1,0},{-1,1},{0,1},{-49,0},{-49,49},{0,49}};
             for(int i = 0;i<pos.length;i++){
               if(pole[x+pos[i][0]][y+pos[i][1]] == 1){
                 nb[x][y]++;
               }
             }   
         }else if(x == 0 && y == poleH-1){  //bottom left
-            int pos[][] = {{0,-1},{1,-1},{1,0}};
+            int pos[][] = {{0,-1},{1,-1},{1,0},{0,-49},{49,-49},{49,0}};
             for(int i = 0;i<pos.length;i++){
               if(pole[x+pos[i][0]][y+pos[i][1]] == 1){
                 nb[x][y]++;
               }
             }   
         }else if(x == poleW-1 && y == poleH-1){  //bottom right
-            int pos[][] = {{-1,-1},{-1,0},{0,-1}};
+            int pos[][] = {{-1,-1},{-1,0},{0,-1},{-49,0},{-49,-49},{0,-49}};
             for(int i = 0;i<pos.length;i++){
               if(pole[x+pos[i][0]][y+pos[i][1]] == 1){
                 nb[x][y]++;
